@@ -1,0 +1,530 @@
+{
+	"info": {
+		"_postman_id": "c8723813-b2b5-4afb-a21c-694dc7d265c8",
+		"name": "Incident Manager Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23319670"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 2dd2f3338511b6bcd5286c376ea91e79149980d0",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "xcdee@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "abcd@django",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/account/login/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"account",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{url}}/account/logout/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"account",
+						"logout",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 2dd2f3338511b6bcd5286c376ea91e79149980d0",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_type",
+							"value": "Individual",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "xcdee@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "abcd@django",
+							"type": "text"
+						},
+						{
+							"key": "password2",
+							"value": "abcd@django",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "abcd",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "address",
+							"value": "jkl",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "ind",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "up",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "gzb",
+							"type": "text"
+						},
+						{
+							"key": "pincode",
+							"value": "201001",
+							"type": "text"
+						},
+						{
+							"key": "mobile_no",
+							"value": "8802178788",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/account/register/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"account",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_edit",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_type",
+							"value": "Individual",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "xcdeee@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "abcd@django",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password2",
+							"value": "abcd@django",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "first_name",
+							"value": "abcd",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "efgh",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "jkl",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "ind",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "up",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "gzb",
+							"type": "text"
+						},
+						{
+							"key": "pincode",
+							"value": "201001",
+							"type": "text"
+						},
+						{
+							"key": "mobile_no",
+							"value": "8802178788",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/account/edit/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"account",
+						"edit",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_location_data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/account/get_location_data/?pincode=201001",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"account",
+						"get_location_data",
+						""
+					],
+					"query": [
+						{
+							"key": "pincode",
+							"value": "201001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "incident_list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{url}}/incident/list",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"incident",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "incident_create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "details",
+							"value": "dfddsdsssss",
+							"type": "text"
+						},
+						{
+							"key": "priority",
+							"value": "Medium",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "Open",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/incident/create/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"incident",
+						"create",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view_incident",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/incident/1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"incident",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_incident",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "details",
+							"value": "dfddsdsssss",
+							"type": "text"
+						},
+						{
+							"key": "priority",
+							"value": "High",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "Open",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/incident/3/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"incident",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rename_incident",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/incident/2/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"incident",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search_incident",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "incident_id",
+						"value": "RMG263412023",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{url}}/incident/list/search?incident_id=RMG832792023",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"incident",
+						"list",
+						"search"
+					],
+					"query": [
+						{
+							"key": "incident_id",
+							"value": "RMG832792023"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
